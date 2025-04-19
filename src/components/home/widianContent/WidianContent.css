@@ -37,6 +37,8 @@
   display: grid;
   gap: 40px;
   padding-top: 117px;
+  position: relative;
+  z-index: 20;
 }
 .widian_content_red_title {
   text-align: center;
@@ -61,6 +63,38 @@
   font-size: 25px;
   color: #666666;
 }
+.right-leaf-image {
+  position: absolute;
+  top: -7%;
+  right: 0;
+  max-width: 18%;
+  z-index: 10; /* Lower than content box */
+}
+/* Leaf images */
+.left-leaf-image {
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  max-width: 20%;
+  z-index: 10; /* Lower than content box */
+}
+@media (max-width: 1440px) {
+  .widian_content_list {
+    max-width: 1000px;
+    padding: 0px 10px;
+    gap: 20px;
+  }
+  .right-leaf-image {
+    top: -7%;
+    max-width: 18%;
+  }
+  /* Leaf images */
+  .left-leaf-image {
+    bottom: 7%;
+
+    max-width: 16%;
+  }
+}
 /* medium devices styel */
 @media (max-width: 1024px) {
   .widian_content {
@@ -72,5 +106,30 @@
   }
   .widian_content_box {
     padding: 56px 10px 0px 10px;
+  }
+  .right-leaf-image {
+    top: -7%;
+
+    max-width: 20%;
+  }
+  .left-leaf-image {
+    top: 3%;
+
+    max-width: 14%;
+  }
+}
+@media (max-width: 768px) {
+  .widian_content_list {
+    padding: 0px;
+    gap: 20px;
+  }
+  .widian_content_list p {
+    line-height: 32px;
+
+    font-size: 18px;
+  }
+  .right-leaf-image {
+    top: -6%;
+    max-width: 20%;
   }
 }

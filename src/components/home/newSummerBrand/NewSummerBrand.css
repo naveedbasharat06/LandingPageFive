@@ -36,6 +36,8 @@
 .newLaunchSummar_text_box p {
   font-family: "Century Gothic";
   font-size: 30px;
+  max-width: 651px;
+  padding-right: 8%;
   line-height: 42px;
   letter-spacing: 0%;
   color: #3d3c3a;
@@ -163,6 +165,7 @@
   }
   .newLaunchSummar_text_box p {
     font-size: 20px;
+    padding-right: 2%;
   }
   /* button Discover frangrance */
   .newLaunch_discover_collection {
@@ -202,6 +205,7 @@
   .newLaunchSummar_text_box p {
     line-height: 35px;
     letter-spacing: 0%;
+
     font-size: 18px;
   }
   /* button Discover frangrance */

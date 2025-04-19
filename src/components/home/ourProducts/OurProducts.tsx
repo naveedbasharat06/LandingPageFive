@@ -57,7 +57,7 @@ function OurProducts() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9 }}
-          className="font-playfair font-medium text-lg md:text-[22px] uppercase text-[#030000] tracking-widest"
+          className="font-playfair-custom font-medium text-lg md:text-[22px] uppercase text-[#030000] tracking-widest"
         >
           OUR PRODUCTS
         </motion.h3>
@@ -164,7 +164,7 @@ function OurProducts() {
 
             {/* Product Info */}
             <div className="text-center">
-              <h2 className="font-playfair text-[#030000] font-normal text-2xl uppercase tracking-wider">
+              <h2 className="font-playfair-custom text-[#030000] font-normal text-2xl uppercase tracking-wider">
                 {product.productName}
               </h2>
               <p className="font-century-gothic text-[#3D3C3A] font-normal text-base mt-1">

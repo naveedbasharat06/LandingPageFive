@@ -64,13 +64,13 @@ function WidianContent() {
         {/* left leaf image */}
         {/* <span className=" z-0"> */}
         <img
-          className="absolute bottom-[5%] md:bottom-[2%] left-0 max-w-[20%] md:max-w-[220px] lg:max-w-[300px] z-0"
+          className="left-leaf-image"
           src={leftLeaf_image}
           alt="leaf decorated imag"
         />
         {/* </span> */}
         {/* widian content */}
-        <div className="widian_content_box mx-auto z-10">
+        <div className="widian_content_box mx-auto z-20">
           <span>
             <img
               className="mx-auto items-center max-w-[251px]"
@@ -156,7 +156,7 @@ function WidianContent() {
       </div>
       <span className="">
         <img
-          className="absolute top-[-5%] md:top-[-10%] right-0 max-w-[30%] md:max-w-[230px] lg:max-w-[379px]"
+          className="right-leaf-image"
           src={rightLeaf_image}
           alt="leaf decorated imag"
         />

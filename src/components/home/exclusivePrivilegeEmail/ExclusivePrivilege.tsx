@@ -6,7 +6,7 @@ function ExclusivePrivilege() {
   return (
     <div className="exclusive_previlege">
       <div className="max-w-auto md:max-w-[965px] text-center flex flex-col gap-5 md:gap-12 mx-auto items-center px-2 md:px-8 py-10 md:py-14">
-        <h1 className="text-[#757C5B] font-playfair font-medium text-3xl md:text-[50px] leading-[0%] md:pt-3 mb-3 ">
+        <h1 className="text-[#757C5B] font-playfair-custom  font-medium text-3xl md:text-[50px] leading-[0%] md:pt-3 mb-3 ">
           Exclusive Privilege
         </h1>
         <p className="font-normal text-[lg] md:text-[25px] leading-[32px] text-[#666666]">
