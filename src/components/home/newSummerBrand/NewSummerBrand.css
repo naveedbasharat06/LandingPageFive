@@ -1,0 +1,295 @@
+.NewSummerBrand {
+  background-image: url("../../../images/NewLaunchSammarBrand.png");
+  margin: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* background-position: center; */
+  position: relative;
+  background-color: #efece2;
+  height: 1085px;
+  width: 100%;
+  padding-top: 256px;
+  padding-left: 209px;
+  /* overflow: hidden; */
+  /* text-align: center; */
+}
+.newLaunchSummar_text_box {
+  display: grid;
+  gap: 88px;
+  max-width: 651px;
+  max-height: 573px;
+}
+.newLaunchSummar_text_box h4 {
+  font-family: "Century Gothic";
+  font-size: 36px;
+  line-height: 22px;
+  letter-spacing: 0%;
+  color: #ae000c;
+}
+.newLaunchSummar_text_box h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 96px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #757c5b;
+}
+.newLaunchSummar_text_box p {
+  font-family: "Century Gothic";
+  font-size: 30px;
+  line-height: 42px;
+  letter-spacing: 0%;
+  color: #3d3c3a;
+}
+/* button Discover frangrance */
+.newLaunch_discover_collection {
+  width: 336px;
+
+  border-radius: 50px;
+  border: 1px solid #666666;
+  padding: 10px 25px;
+  font-family: "Century Gothic", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0%;
+  font-size: 25px;
+
+  text-align: center;
+  color: #000000;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.newLaunch_discover_collection:hover {
+  color: #333;
+  border-color: #333;
+  background-color: rgba(100, 96, 96, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px) scale(1.02);
+}
+@media (max-width: 1880px) {
+  .NewSummerBrand {
+    background-image: url("../../../images/NewLaunchSammarBrand.png");
+    margin: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    position: relative;
+    height: 1000px;
+    width: 100%;
+    padding-top: 10%;
+    padding-left: 6%;
+    /* overflow: hidden; */
+    /* text-align: center; */
+  }
+  .newLaunchSummar_text_box {
+    display: grid;
+    gap: 30px;
+    max-width: 651px;
+    max-height: 573px;
+  }
+  .newLaunchSummar_text_box h4 {
+    font-size: 34px;
+  }
+  .newLaunchSummar_text_box h1 {
+    font-size: 90px;
+  }
+  .newLaunchSummar_text_box p {
+    font-size: 26px;
+  }
+  /* button Discover frangrance */
+  .newLaunch_discover_collection {
+    max-width: 336px;
+
+    padding: 10px 25px;
+
+    font-size: 23px;
+  }
+}
+@media (max-width: 1680px) {
+  .NewSummerBrand {
+    background-size: cover;
+
+    height: 1000px;
+    width: 100%;
+    padding-top: 10%;
+    padding-left: 6%;
+    /* overflow: hidden; */
+    /* text-align: center; */
+  }
+  .newLaunchSummar_text_box {
+    display: grid;
+    gap: 30px;
+    max-width: 601px;
+    max-height: 573px;
+  }
+  .newLaunchSummar_text_box h4 {
+    font-size: 32px;
+  }
+  .newLaunchSummar_text_box h1 {
+    font-size: 85px;
+  }
+  .newLaunchSummar_text_box p {
+    font-size: 23px;
+  }
+  /* button Discover frangrance */
+  .newLaunch_discover_collection {
+    max-width: 336px;
+
+    padding: 10px 25px;
+
+    font-size: 22px;
+  }
+}
+@media (max-width: 1440px) {
+  .NewSummerBrand {
+    background-size: cover;
+
+    height: 900%;
+    width: 100%;
+    padding-top: 10%;
+    padding-left: 6%;
+    padding-bottom: 3%;
+    /* overflow: hidden; */
+    /* text-align: center; */
+  }
+  .newLaunchSummar_text_box {
+    display: grid;
+    gap: 25px;
+    max-width: 601px;
+    max-height: 573px;
+  }
+  .newLaunchSummar_text_box h4 {
+    font-size: 30px;
+  }
+  .newLaunchSummar_text_box h1 {
+    font-size: 76px;
+  }
+  .newLaunchSummar_text_box p {
+    font-size: 20px;
+  }
+  /* button Discover frangrance */
+  .newLaunch_discover_collection {
+    max-width: 326px;
+
+    padding: 8px 20px;
+
+    font-size: 22px;
+  }
+}
+@media (max-width: 1024px) {
+  .NewSummerBrand {
+    background-size: cover;
+    height: 900%;
+    width: 100%;
+    padding-top: 8%;
+    padding-left: auto;
+    padding-bottom: 3%;
+    margin: auto;
+    align-items: center;
+    /* overflow: hidden; */
+    /* text-align: center; */
+  }
+  .newLaunchSummar_text_box {
+    display: grid;
+    gap: 20px;
+    max-width: 550px;
+    max-height: 573px;
+    /* background-color: azure;/ */
+  }
+  .newLaunchSummar_text_box h4 {
+    font-size: 28px;
+  }
+  .newLaunchSummar_text_box h1 {
+    font-size: 74px;
+  }
+  .newLaunchSummar_text_box p {
+    line-height: 35px;
+    letter-spacing: 0%;
+    font-size: 18px;
+  }
+  /* button Discover frangrance */
+  .newLaunch_discover_collection {
+    max-width: 298px;
+
+    padding: 7px 14px;
+
+    font-size: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .NewSummerBrand {
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    padding-top: 8%;
+    padding-left: 3%;
+    padding-bottom: 3%;
+    margin: auto;
+    align-items: center;
+    /* overflow: hidden; */
+    /* text-align: center; */
+  }
+  .newLaunchSummar_text_box {
+    display: grid;
+    gap: 15px;
+    max-width: 550px;
+    max-height: 573px;
+  }
+  .newLaunchSummar_text_box h4 {
+    font-size: 25px;
+  }
+  .newLaunchSummar_text_box h1 {
+    font-size: 65px;
+  }
+  .newLaunchSummar_text_box p {
+    line-height: 35px;
+    letter-spacing: 0%;
+    font-size: 16px;
+  }
+  /* button Discover frangrance */
+  .newLaunch_discover_collection {
+    max-width: 298px;
+
+    padding: 6px 12px;
+
+    font-size: 18px;
+  }
+}
+@media (max-width: 425px) {
+  .NewSummerBrand {
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+
+    margin: auto;
+    padding: 10% 2% 4% 3%;
+    align-items: center;
+    overflow: hidden;
+    /* text-align: center; */
+  }
+  .newLaunchSummar_text_box {
+    display: grid;
+    gap: 15px;
+    max-width: 90%;
+    max-height: 573px;
+  }
+  .newLaunchSummar_text_box h4 {
+    font-size: 22px;
+    max-width: 96%;
+  }
+  .newLaunchSummar_text_box h1 {
+    font-size: 55px;
+    max-width: 96%;
+  }
+  .newLaunchSummar_text_box p {
+    line-height: 32px;
+    letter-spacing: 0%;
+    font-size: 14px;
+    max-width: 96%;
+  }
+  /* button Discover frangrance */
+  .newLaunch_discover_collection {
+    max-width: 80%;
+    align-items: center;
+    margin: auto;
+    padding: 4px 9px;
+    font-size: 16px;
+  }
+}

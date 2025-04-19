@@ -1,0 +1,37 @@
+.red_widian_brand {
+  background-image: url("../../../images/redBottle_widian.jpeg");
+  height: 100vh; /* Use viewport height instead of fixed pixels */
+  min-height: 650px; /* Minimum height for smaller screens */
+  max-height: 1132px; /* Maximum height for larger screens */
+  width: 100%;
+  background-size: cover; /* Changed from 'contain' to 'cover' */
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  background-color: #efece2;
+  overflow: hidden; /* Prevent any potential overflow */
+}
+
+/* button Discover frangrance */
+.redBottle_discoverBtn {
+  max-width: 195px;
+  border-radius: 50px;
+  border: 1px solid #666666;
+  padding: 10px 25px;
+  font-family: "Century Gothic", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0%;
+  font-size: 25px;
+  line-height: 22px;
+  text-align: center;
+  margin-top: 20px;
+  color: #000000;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.redBottle_discoverBtn:hover {
+  color: #333;
+  border-color: #333;
+  background-color: rgba(100, 96, 96, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px) scale(1.02);
+}

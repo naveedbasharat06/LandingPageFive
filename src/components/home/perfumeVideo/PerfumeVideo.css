@@ -1,0 +1,18 @@
+.Perfume_backgroundVideo {
+  background-image: url("../../../images/perfumeBrandVideo.png");
+  height: 100vh; /* Use viewport height instead of fixed pixels */
+  min-height: 650px; /* Minimum height for smaller screens */
+  max-height: 1010px; /* Maximum height for larger screens */
+  width: 100%;
+  background-size: cover; /* Changed from 'contain' to 'cover' */
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  background-color: #efece2;
+  overflow: hidden; /* Prevent any potential overflow */
+}
+
+/* Optional: Add smooth transition for icon scaling */
+.playPauseIcon {
+  transition: transform 0.3s ease;
+}

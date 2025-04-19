@@ -1,0 +1,31 @@
+/* Base styles */
+.our_product {
+  /* padding: 3rem 1rem; */
+  width: 100%;
+}
+
+/* @media (min-width: 640px) {
+  .our_product {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .our_product {
+    padding: 3rem 4rem;
+  }
+} */
+
+/* Product card hover effect */
+.group:hover .group-hover\:scale-105 {
+  transform: scale(1.05);
+}
+
+/* Transition effects */
+.transition-transform {
+  transition-property: transform;
+}
+
+.duration-500 {
+  transition-duration: 500ms;
+}

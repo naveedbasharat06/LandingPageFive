@@ -1,0 +1,151 @@
+.home_heroBanner {
+  background-image: url("../../../images/HomeHeroBackground.jpeg");
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  background-color: #efece2;
+  height: 818px;
+  width: 100%;
+  /* overflow: hidden; */
+  /* text-align: center; */
+}
+
+.logo_perfume {
+  position: absolute;
+}
+.discover_collection {
+  width: 297px;
+  border-radius: 13px;
+  border: 1px solid #666666;
+  padding: 16px 26px;
+  font-family: "Century Gothic", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #666666;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.discover_collection:hover {
+  color: #333;
+  border-color: #333;
+  background-color: rgba(100, 96, 96, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px) scale(1.02);
+}
+/* * Add these to your hersectionBanner.css */
+.popover-content {
+  font-family: "Century Gothic", sans-serif;
+  cursor: pointer;
+  padding: 2px;
+}
+
+.custom-popover .ant-popover-inner {
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.popover_btn_box_R,
+.popover_btn_box_M {
+  position: absolute;
+  z-index: 30;
+  background-color: white;
+  padding: 4px;
+  border-radius: 50% 50% 50% 0%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.popover_btn_box_R {
+  top: 30%;
+  left: 10%;
+}
+
+.popover_btn_box_M {
+  top: 20%;
+  right: 14%;
+}
+
+.popover-button_R,
+.popover-button_M {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+}
+
+.popover-button_R {
+  background-color: #666;
+  color: white;
+  border-radius: 50%;
+}
+
+.popover-button_M {
+  background-color: #4bdb4b;
+  color: white;
+  border-radius: 50%;
+}
+
+.floating-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+/* Optional animation for the perfume bottle */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.logo_perfume img:last-child {
+  animation: float 3s ease-in-out infinite;
+}
+/* medium device style style */
+@media (max-width: 1024px) {
+  .home_heroBanner {
+    height: 100%;
+    width: 100%;
+    padding: 20px 10px;
+    /* overflow: hidden; */
+    /* text-align: center; */
+  }
+  .discover_collection {
+    width: 50%;
+    padding: 14px 24px;
+    border-radius: 13px;
+  }
+}
+@media (max-width: 768px) {
+  .home_heroBanner {
+    height: 100%;
+    width: 100%;
+    padding: 20px 10px;
+    /* overflow: hidden; */
+    /* text-align: center; */
+  }
+  .discover_collection {
+    width: 90%;
+    padding: 14px 24px;
+    border-radius: 13px;
+  }
+}

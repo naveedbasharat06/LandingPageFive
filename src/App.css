@@ -1,38 +1,38 @@
 .App {
-  text-align: center;
+  max-width: 1920px;
+  margin: auto;
+}
+@font-face {
+  font-family: "Century Gothic";
+  src: url("./fonts/Century\ Gothic.ttf") format("truetype");
+
+  font-style: normal;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: "Century Gothic";
+  src: url("./fonts/CenturyGothic.ttf") format("truetype");
+  font-style: normal;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+@font-face {
+  font-family: "Century Gothic";
+  src: url("./fonts//sharefonts.net.txt") format("truetype");
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-style: italic;
 }
-
-.App-link {
-  color: #61dafb;
+@font-face {
+  font-family: "Helvetica";
+  src: url("./fonts/Helvetica.ttf") format("truetype");
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@font-face {
+  font-family: "Playfair Display", serif;
+  src: url("./fonts/PlayfairDisplay-VariableFont_wght.ttf") format("truetype");
+}
+/* @font-face {
+  font-family: "Helvetica";
+  src: url("./fonts/Helvetica-Bold.ttf") format("truetype");
+} */
+body {
+  font-family: "Century Gothic", sans-serif;
 }
