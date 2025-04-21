@@ -52,7 +52,7 @@ function OurProducts() {
   return (
     <div className="our_product bg-[#FDF9F2] py-12 px-4 md:px-0">
       {/* Products Title */}
-      <div className="our_products_title my-7 md:my-11 text-center">
+      <div className="our_products_title my-7 md:my-16 text-center">
         <motion.h3
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -72,7 +72,7 @@ function OurProducts() {
       </div>
 
       {/* Products Grid border-t-2*/}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-2 lg:gap-0 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-2 lg:gap-0 border-b-2">
         {PerfumeProductData.map((product) => (
           <motion.div
             key={product.id}
@@ -99,7 +99,7 @@ function OurProducts() {
               <img
                 src={product.productImg}
                 alt={product.productName}
-                className="max-w-[390px] max-h-[576px] object-cover transition-transform duration-500 group-hover:scale-105 mx-auto"
+                className="max-w-[390px] max-h-[576px] object-cover transition-transform duration-500 group-hover:scale-105 mx-auto md:mb-6"
               />
 
               {/* Hover Actions */}
@@ -167,7 +167,7 @@ function OurProducts() {
               <h2 className="font-playfair-custom text-[#030000] font-normal text-2xl uppercase tracking-wider">
                 {product.productName}
               </h2>
-              <p className="font-century-gothic text-[#3D3C3A] font-normal text-base mt-1">
+              <p className="font-century-gothic text-[#3D3C3A] font-normal text-base  mb-2">
                 AED {FormatPrice(product.productsPrice)}
               </p>
             </div>

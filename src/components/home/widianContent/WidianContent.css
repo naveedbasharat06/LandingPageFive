@@ -35,8 +35,8 @@
   max-width: 1070px;
   flex-direction: column;
   display: grid;
-  gap: 40px;
-  padding-top: 117px;
+  gap: 35px;
+  padding-top: 110px;
   position: relative;
   z-index: 20;
 }
@@ -65,7 +65,7 @@
 }
 .right-leaf-image {
   position: absolute;
-  top: -7%;
+  top: -8%;
   right: 0;
   max-width: 18%;
   z-index: 10; /* Lower than content box */
@@ -73,12 +73,47 @@
 /* Leaf images */
 .left-leaf-image {
   position: absolute;
-  bottom: 5%;
+  bottom: 1%;
   left: 0;
   max-width: 20%;
   z-index: 10; /* Lower than content box */
 }
+@media (max-width: 1680px) {
+  .widian_content {
+    height: 990px;
+  }
+  .widian_content_list p {
+    font-size: 22px;
+  }
+  .widian_content_red_title {
+    font-size: 30px;
+  }
+  .right-leaf-image {
+    position: absolute;
+    top: -7%;
+    right: 0;
+    max-width: 18%;
+    z-index: 10; /* Lower than content box */
+  }
+  /* Leaf images */
+  .left-leaf-image {
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+    max-width: 17%;
+    z-index: 10; /* Lower than content box */
+  }
+}
 @media (max-width: 1440px) {
+  .widian_content {
+    height: 950px;
+  }
+  .widian_content_box {
+    max-width: 1000px;
+
+    gap: 30px;
+    padding-top: 90px;
+  }
   .widian_content_list {
     max-width: 1000px;
     padding: 0px 10px;
@@ -90,8 +125,7 @@
   }
   /* Leaf images */
   .left-leaf-image {
-    bottom: 7%;
-
+    bottom: 1%;
     max-width: 16%;
   }
 }

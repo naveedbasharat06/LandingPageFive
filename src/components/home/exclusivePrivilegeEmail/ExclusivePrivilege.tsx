@@ -4,8 +4,8 @@ import React from "react";
 import "./ExclusivePrivilege.css";
 function ExclusivePrivilege() {
   return (
-    <div className="exclusive_previlege">
-      <div className="max-w-auto md:max-w-[965px] text-center flex flex-col gap-5 md:gap-12 mx-auto items-center px-2 md:px-8 py-10 md:py-14">
+    <div className="exclusive_previlege md:pt-14">
+      <div className="max-w-auto md:max-w-[965px] text-center flex flex-col gap-5 md:gap-14 mx-auto items-center px-2 md:px-8 py-10 md:py-14">
         <h1 className="text-[#757C5B] font-playfair-custom  font-medium text-3xl md:text-[50px] leading-[0%] md:pt-3 mb-3 ">
           Exclusive Privilege
         </h1>
@@ -16,7 +16,7 @@ function ExclusivePrivilege() {
         <Input
           placeholder="Email"
           size="large"
-          className="max-w-[90%] md:max-w-[606px] border-1 border-gray-600 rounded-full"
+          className="max-w-[90%] md:max-w-[606px] placeholder:text-black md:py-4 pl-8 border-1 border-gray-600 rounded-full"
           suffix={<RightOutlined />}
         />
         <p className="font-normal text-[#666666] text-sm md:text-lg leading-6 tracking-normal px-8 lg:px-16">

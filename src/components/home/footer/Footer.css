@@ -1,0 +1,29 @@
+/* Custom styles that can't be easily done with Tailwind */
+.wadian_footer_main {
+  font-family: "Century Gothic" !important;
+  position: relative;
+}
+.widian-footer .ant-input {
+  background-color: transparent;
+  color: white;
+  border-color: #4b5563;
+}
+
+.widian-footer .ant-input::placeholder {
+  color: #ffffff;
+}
+
+.widian-footer .ant-input:hover,
+.widian-footer .ant-input:focus {
+  border-color: #ffffff;
+  box-shadow: none;
+}
+
+.widian-footer .ant-btn-primary {
+  border-color: white;
+}
+
+.widian-footer .ant-btn-primary:hover {
+  border-color: #d1d5db;
+  background-color: transparent;
+}

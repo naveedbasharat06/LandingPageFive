@@ -1,53 +1,53 @@
-import React, { useState } from "react";
-import { Button, Popover, Modal, Input } from "antd";
+// import React, { useState } from "react";
+// import { Button, Popover, Modal, Input } from "antd";
 import "./WidianContent.css";
-import { SendOutlined } from "@ant-design/icons";
+// import { SendOutlined } from "@ant-design/icons";
 import widian_pink_logo from "../../../images/WIDIAN Logo3.png";
 import leftLeaf_image from "../../../images/image 14.png";
 import rightLeaf_image from "../../../images/Group 10.png";
 
 function WidianContent() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const showModal = () => {
-    setIsModalOpen(true);
-  };
+  // const showModal = () => {
+  //   setIsModalOpen(true);
+  // };
 
-  const handleOk = () => {
-    setIsModalOpen(false);
-  };
+  // const handleOk = () => {
+  //   setIsModalOpen(false);
+  // };
 
-  const handleCancel = () => {
-    setIsModalOpen(false);
-  };
+  // const handleCancel = () => {
+  //   setIsModalOpen(false);
+  // };
 
-  const wlcContent = (
-    <div className="popover-content cursor-pointer" onClick={showModal}>
-      <div className="flex max-w-[240px] gap-2">
-        <div className="text-2xl bg-slate-600 text-white w-10 h-10 p-2 rounded-full flex items-center justify-center">
-          O
-        </div>
-        <div className="flex-1">
-          <div className="flex justify-start gap-2 text-sm mb-1">
-            <span className="font-semibold">Umer</span>
-            <span className="text-gray-500">6 days ago</span>
-          </div>
-          <p className="text-xs">
-            Greetings. I have 5 years of experience. Convert design into clean,
-            valid, semantic html css js code. Layout will be respoinsive for all
-            devices, optimized. My telegram @nytska_ua I would be happy to
-            cooperate
-          </p>
-        </div>
-      </div>
-    </div>
-  );
+  // const wlcContent = (
+  //   <div className="popover-content cursor-pointer" onClick={showModal}>
+  //     <div className="flex max-w-[240px] gap-2">
+  //       <div className="text-2xl bg-slate-600 text-white w-10 h-10 p-2 rounded-full flex items-center justify-center">
+  //         O
+  //       </div>
+  //       <div className="flex-1">
+  //         <div className="flex justify-start gap-2 text-sm mb-1">
+  //           <span className="font-semibold">Umer</span>
+  //           <span className="text-gray-500">6 days ago</span>
+  //         </div>
+  //         <p className="text-xs">
+  //           Greetings. I have 5 years of experience. Convert design into clean,
+  //           valid, semantic html css js code. Layout will be respoinsive for all
+  //           devices, optimized. My telegram @nytska_ua I would be happy to
+  //           cooperate
+  //         </p>
+  //       </div>
+  //     </div>
+  //   </div>
+  // );
 
   return (
     <div className="relative">
       <div className="widian_content">
         {/* popOver review */}
-        <div>
+        {/* <div>
           <div className="popover_btn_box_O">
             <Popover
               placement="left"
@@ -60,7 +60,7 @@ function WidianContent() {
               </Button>
             </Popover>
           </div>
-        </div>
+        </div> */}
         {/* left leaf image */}
         {/* <span className=" z-0"> */}
         <img
@@ -108,7 +108,7 @@ function WidianContent() {
           </div>
         </div>
         {/* modal for user comment */}
-        <Modal
+        {/* <Modal
           title="Comment"
           open={isModalOpen}
           onOk={handleOk}
@@ -152,7 +152,7 @@ function WidianContent() {
               }
             />
           </div>
-        </Modal>
+        </Modal> */}
       </div>
       <span className="">
         <img

@@ -18,6 +18,7 @@
 .discover_collection {
   width: 297px;
   border-radius: 13px;
+  max-height: 63px;
   border: 1px solid #666666;
   padding: 16px 26px;
   font-family: "Century Gothic", sans-serif;
