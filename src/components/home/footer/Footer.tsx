@@ -83,7 +83,7 @@ const WidianFooter = () => {
               <img
                 src={widianLogo}
                 alt="widian logo"
-                className="xl:max-w-[250px] md:max-w-[200px] mb-6 sm:mb-16"
+                className="xl:max-w-[250px] lg:max-w-[200px] mb-6 sm:mb-16"
               />
               <h3 className="text-base xl:text-lg font-bold uppercase tracking-[0%] leading-[26px] text-[#FFFFFF] ">
                 GET SOCIAL

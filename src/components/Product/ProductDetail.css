@@ -1,0 +1,29 @@
+.product-detail .ant-input-number {
+  width: 100px;
+}
+
+.product-detail .ant-input-number-handler-wrap {
+  background: #f5f5f5;
+}
+
+.product-detail .ant-input-number-input {
+  text-align: center;
+}
+
+.product-detail .ant-btn {
+  height: 48px;
+  padding: 0 24px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.product-detail .ant-btn-primary {
+  background: #757c5b;
+  border-color: #757c5b;
+}
+
+.product-detail .ant-btn-primary:hover {
+  background: #5a6047;
+  border-color: #5a6047;
+}

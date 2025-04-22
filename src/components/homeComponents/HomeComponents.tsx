@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../home/navbar/Navbar";
+// import Navbar from "../home/navbar/Navbar";
 import HomeHeroSection from "../home/herosection/HeroSectionBanner";
 import WidianContent from "../home/widianContent/WidianContent";
 import NewSummarBrand from "../home/newSummerBrand/NewSummarBrand";
@@ -12,7 +12,7 @@ import WidianFooter from "../home/footer/Footer";
 function HomeComponents() {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <HomeHeroSection />
       <WidianContent />
       <NewSummarBrand />

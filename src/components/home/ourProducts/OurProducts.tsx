@@ -6,21 +6,27 @@ import product03 from "../../../images/product03.png";
 import product04 from "../../../images/products04.png";
 import "./ourProducts.css";
 import { Tooltip } from "antd";
+import { useNavigate } from "react-router-dom";
 import { FormatPrice } from "../../../utils/formatePrice";
 interface PerfumeProductsType {
   id: number;
   productImg: string;
   productName: string;
   productsPrice: number;
+  originalPrice?: number;
+  collection?: string;
+  description?: string;
   isNew?: boolean;
 }
-
-const PerfumeProductData: PerfumeProductsType[] = [
+export const PerfumeProductData: PerfumeProductsType[] = [
   {
     id: 1,
     productImg: product01,
     productName: "BANIYAS",
     productsPrice: 2956.0,
+    originalPrice: 3200.0,
+    collection: "Velvet Collection",
+    description: "An opulent fragrance with notes of amber, oud, and vanilla.",
     isNew: true,
   },
   {
@@ -28,18 +34,27 @@ const PerfumeProductData: PerfumeProductsType[] = [
     productImg: product02,
     productName: "GRANADA",
     productsPrice: 2956.0,
+    originalPrice: 3100.0,
+    collection: "Gold Collection",
+    description: "A vibrant scent with citrus top notes and woody undertones.",
   },
   {
     id: 3,
     productImg: product03,
     productName: "BLACK II",
     productsPrice: 2956.0,
+    originalPrice: 3300.0,
+    collection: "Sapphire Collection",
+    description: "A mysterious blend of dark florals and smoky accords.",
   },
   {
     id: 4,
     productImg: product04,
     productName: "LIWA",
     productsPrice: 2956.0,
+    originalPrice: 3230.0,
+    collection: "Rose Arabs Collection",
+    description: "A romantic fragrance featuring rare rose and spice notes.",
   },
 ];
 
@@ -49,6 +64,11 @@ const itemVariants = {
 };
 
 function OurProducts() {
+  const navigate = useNavigate();
+  // navigate to product detail page
+  const handleProductClick = (product: PerfumeProductsType) => {
+    navigate(`/products/${product.id}`, { state: { product } });
+  };
   return (
     <div className="our_product bg-[#FDF9F2] py-12 px-4 md:px-0">
       {/* Products Title */}
@@ -81,7 +101,8 @@ function OurProducts() {
             animate="visible"
             transition={{ duration: 0.3 }}
             whileHover={{ y: -10 }}
-            className="relative group md:border-t-2 border-l-2"
+            className="relative group md:border-t-2 border-l-2 cursor-pointer"
+            onClick={() => handleProductClick(product)}
           >
             {/* New Badge */}
             {product.isNew && (
