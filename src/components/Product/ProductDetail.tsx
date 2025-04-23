@@ -6,7 +6,10 @@ import { GiftOutlined, PlusOutlined, MinusOutlined } from "@ant-design/icons";
 import { FormatPrice } from "../../utils/formatePrice";
 import "./ProductDetail.css";
 import { PerfumeProductData } from "../home/ourProducts/OurProducts";
-// import Productlist from "./productlist";
+import ProductNotes from "./Notes";
+import PerfumeNotes from "./PerfumeNotes";
+import Founder from "./Founder";
+import ProductList from "./ProductList";
 
 interface ProductType {
   id: number;
@@ -38,6 +41,10 @@ const ProductDetail = () => {
       setIsLoading(false);
     }
   }, [productId, location.state]);
+  // show title
+  useEffect(() => {
+    document.title = `${product?.productName} - Perfume`;
+  }, [product?.productName]);
 
   // Quantity handlers
   const increment = () => {
@@ -260,15 +267,15 @@ const ProductDetail = () => {
                 {/* Description */}
                 <motion.div
                   variants={itemVariants}
-                  className="pt-8 border-t border-gray-200 max-w-[90%]"
+                  className="pt-6 max-w-[90%]"
                 >
                   <div className="flex justify-between items-center">
-                    <h3 className="font-century-gothic font-bold text-[#030000] text-base md:text-lg uppercase mb-1">
+                    <h3 className="font-century-gothic font-bold text-[#030000] text-base md:text-lg uppercase">
                       PRODUCT DESCRIPTION
                     </h3>
                     <button
                       onClick={toggleDescription}
-                      className="w-8 h-8 flex items-center justify-center border border-[#CCCCCC] hover:bg-gray-200 transition-colors"
+                      className="w-8 h-8 flex items-center justify-center hover:bg-gray-200 transition-colors"
                       aria-label={
                         showDescription
                           ? "Hide description"
@@ -302,7 +309,12 @@ const ProductDetail = () => {
         </motion.div>
       </AnimatePresence>
       {/* multiple product */}
-      <div>{/* <Productlist /> */}</div>
+      <div>
+        <ProductNotes />
+        <PerfumeNotes />
+        <Founder />
+        <ProductList />
+      </div>
     </div>
   );
 };

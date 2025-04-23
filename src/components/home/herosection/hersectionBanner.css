@@ -24,6 +24,7 @@
   font-family: "Century Gothic", sans-serif;
   font-weight: 400;
   letter-spacing: 0%;
+  margin-left: 35px;
   text-align: center;
   color: #666666;
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -133,6 +134,7 @@
   .discover_collection {
     width: 50%;
     padding: 14px 24px;
+    margin-left: 20px;
     border-radius: 13px;
   }
 }
@@ -147,6 +149,7 @@
   .discover_collection {
     width: 90%;
     padding: 14px 24px;
+    margin-left: 0px;
     border-radius: 13px;
   }
 }

@@ -9,8 +9,12 @@ import paypal from "../../../images/paypal.png";
 import apple_pay from "../../../images/apple_pay.png";
 import g_pay from "../../../images/g_pay.png";
 import chatBtn from "../../../images/Chat-btn.png";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const WidianFooter = () => {
+  const navigate = useNavigate();
+
   const footerBrand_logo = [
     {
       Id: 1,
@@ -38,13 +42,40 @@ const WidianFooter = () => {
       Brandname: "g pay",
     },
   ];
+
+  const navigationLinks = {
+    collections: [
+      { name: "Block collection", path: "/collections/block" },
+      { name: "Gold collection", path: "/collections/gold" },
+      { name: "Velvet collection", path: "/collections/velvet" },
+      { name: "Sapphire collection", path: "/collections/sapphire" },
+      { name: "Rose Arabia collection", path: "/collections/rose-arabia" },
+      { name: "Limited collection", path: "/collections/limited" },
+    ],
+    customerService: [
+      { name: "Payment Methods", path: "/payment-methods" },
+      { name: "Accessibility Statement", path: "/accessibility" },
+      { name: "Stores", path: "/stores" },
+      { name: "Help Center", path: "/help-center" },
+      { name: "Contact Us", path: "/contact-us" },
+    ],
+    legal: [
+      { name: "Terms & Conditions", path: "/terms" },
+      { name: "Privacy Policy", path: "/privacy" },
+      { name: "Shipping Policy", path: "/shipping" },
+      { name: "Returns & Returns Policy", path: "/returns" },
+      { name: "Cookie Policy", path: "/cookies" },
+      { name: "Disclaimer", path: "/disclaimer" },
+    ],
+  };
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
+        staggerChildren: 0.2,
+        delayChildren: 0.6,
       },
     },
   };
@@ -58,6 +89,10 @@ const WidianFooter = () => {
         duration: 0.5,
       },
     },
+  };
+
+  const handleNavigation = (path: any) => {
+    navigate(path);
   };
 
   return (
@@ -117,21 +152,18 @@ const WidianFooter = () => {
               COLLECTIONS
             </h3>
             <ul className="space-y-3 sm:space-y-5">
-              {[
-                "Block collection",
-                "Gold collection",
-                "Velvet collection",
-                "Sapphire collection",
-                "Rose Arabia collection",
-                "Limited collection",
-              ].map((item) => (
-                <li key={item}>
-                  <a
-                    href="./#"
-                    className="text-[14px] xl:text-[16px] leading-[22px] font-normal tracking-[0%] text-white hover:text-gray-300 transition-colors duration-300"
+              {navigationLinks.collections.map((item) => (
+                <li key={item.name}>
+                  <Link
+                    to={item.path}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleNavigation(item.path);
+                    }}
+                    className="text-[14px] xl:text-[16px] leading-[22px] font-normal tracking-[0%] text-white hover:text-gray-300 transition-colors duration-300 cursor-pointer"
                   >
-                    {item}
-                  </a>
+                    {item.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -143,20 +175,18 @@ const WidianFooter = () => {
               CUSTOMER SERVICE
             </h3>
             <ul className="space-y-3 sm:space-y-5">
-              {[
-                "Payment Methods",
-                "Accessibility Statement",
-                "Stores",
-                "Help Center",
-                "Contact Us",
-              ].map((item) => (
-                <li key={item}>
-                  <a
-                    href="./#"
-                    className="text-[16px] leading-[22px] font-normal tracking-[0%] text-white hover:text-gray-300 transition-colors duration-300"
+              {navigationLinks.customerService.map((item) => (
+                <li key={item.name}>
+                  <Link
+                    to={item.path}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleNavigation(item.path);
+                    }}
+                    className="text-[16px] leading-[22px] font-normal tracking-[0%] text-white hover:text-gray-300 transition-colors duration-300 cursor-pointer"
                   >
-                    {item}
-                  </a>
+                    {item.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -168,21 +198,18 @@ const WidianFooter = () => {
               LEGAL
             </h3>
             <ul className="space-y-3 sm:space-y-5">
-              {[
-                "Terms & Conditions",
-                "Privacy Policy",
-                "Shipping Policy",
-                "Returns & Returns Policy",
-                "Cookie Policy",
-                "Disclaimer",
-              ].map((item) => (
-                <li key={item}>
-                  <a
-                    href="./#"
-                    className=" text-[14px] xl:text-[16px] leading-[22px] font-normal tracking-[0%] text-white hover:text-gray-300 transition-colors duration-300"
+              {navigationLinks.legal.map((item) => (
+                <li key={item.name}>
+                  <Link
+                    to={item.path}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleNavigation(item.path);
+                    }}
+                    className=" text-[14px] xl:text-[16px] leading-[22px] font-normal tracking-[0%] text-white hover:text-gray-300 transition-colors duration-300 cursor-pointer"
                   >
-                    {item}
-                  </a>
+                    {item.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -241,5 +268,4 @@ const WidianFooter = () => {
     </footer>
   );
 };
-
 export default WidianFooter;

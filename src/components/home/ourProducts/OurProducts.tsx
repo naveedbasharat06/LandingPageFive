@@ -67,7 +67,13 @@ function OurProducts() {
   const navigate = useNavigate();
   // navigate to product detail page
   const handleProductClick = (product: PerfumeProductsType) => {
-    navigate(`/products/${product.id}`, { state: { product } });
+    // Convert title to URL-friendly format
+    const urlFriendlyTitle = product.productName
+      .toLowerCase()
+      .replace(/[^\w\s-]/g, "") // Remove special characters except dashes
+      .replace(/\s+/g, "-") // Replace spaces with dashes
+      .replace(/-+/g, "-"); // Remove consecutive dashes
+    navigate(`/products/${urlFriendlyTitle}`, { state: { product: product } });
   };
   return (
     <div className="our_product bg-[#FDF9F2] py-12 px-4 md:px-0">

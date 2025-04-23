@@ -7,7 +7,7 @@ import PerfumeVideo from "../home/perfumeVideo/PerfumeVideo";
 import OurProducts from "../home/ourProducts/OurProducts";
 import RedWidianBrand from "../home/redWidianBrand/RedWidianBrand";
 import ExclusivePrivilege from "../home/exclusivePrivilegeEmail/ExclusivePrivilege";
-import WidianFooter from "../home/footer/Footer";
+
 // import WadianFooter
 function HomeComponents() {
   return (
@@ -20,7 +20,6 @@ function HomeComponents() {
       <OurProducts />
       <RedWidianBrand />
       <ExclusivePrivilege />
-      <WidianFooter />
     </div>
   );
 }

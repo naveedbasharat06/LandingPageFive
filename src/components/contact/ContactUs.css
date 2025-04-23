@@ -1,0 +1,32 @@
+/* src/pages/ContactUs/ContactUs.css */
+.contact-us-page {
+  font-family: "Century Gothic", sans-serif;
+}
+
+.ant-input:hover,
+.ant-input:focus,
+.ant-input-focused {
+  border-color: #757b58 !important;
+  box-shadow: 0 0 0 2px rgba(117, 123, 88, 0.2) !important;
+}
+
+.ant-input-textarea:hover,
+.ant-input-textarea:focus {
+  border-color: #757b58 !important;
+  box-shadow: 0 0 0 2px rgba(117, 123, 88, 0.2) !important;
+}
+/*  */
+.contactUs_footer_navlist li a {
+  font-weight: 400;
+  font-size: 22px;
+  letter-spacing: 0%;
+  line-height: 28px;
+  color: #666666;
+
+  font-family: "Century Gothic";
+}
+@media (max-width: 768px) {
+  .contactUs_footer_navlist li a {
+    font-size: 16px;
+  }
+}
