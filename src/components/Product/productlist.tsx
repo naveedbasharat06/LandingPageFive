@@ -80,7 +80,7 @@ function ProductList() {
           transition={{ delay: 0.2, duration: 0.5 }}
           className="font-playfair-custom text-4xl md:text-[42px] font-medium leading-[50px] tracking-normal uppercase text-[#757C5B]"
         >
-          You May Also Like
+          You May Also Like.
         </motion.h1>
       </div>
 
