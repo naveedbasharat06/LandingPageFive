@@ -1,0 +1,30 @@
+/* button Discover frangrance */
+.collection_discover_fragrance {
+  max-width: 368px;
+  border-radius: 50px;
+  border: 1px solid #666666;
+  padding: 10px 25px;
+  font-family: "Century Gothic", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0%;
+  font-size: 25px;
+  line-height: 22px;
+  text-align: center;
+  /* margin-top: 20px; */
+  color: #030000;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.collection_discover_fragrance:hover {
+  color: #ffffff;
+  border-color: #333;
+  background-color: #757b58;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px) scale(1.02);
+}
+@media (max-width: 768px) {
+  .collection_discover_fragrance {
+    font-size: 20px;
+
+    margin-top: 15px;
+  }
+}

@@ -218,7 +218,7 @@ const WidianFooter = () => {
           {/* Newsletter */}
           <motion.div
             variants={itemVariants}
-            className="md:col-span-2 lg:col-span-1 mb-6"
+            className="md:col-span-2 lg:col-span-1 "
           >
             <h3 className="text-base xl:text-lg font-bold uppercase tracking-[0%] leading-[26px] text-[#FFFFFF] mb-4 sm:mb-6">
               SIGN UP

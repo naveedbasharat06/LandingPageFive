@@ -5,10 +5,12 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomeComponents from "./components/homeComponents/HomeComponents";
 import BackToTop from "./hooks/BackToTop";
 import Navbar from "./components/home/navbar/Navbar";
-import ProductDetailPage from "./components/Product/ProductDetail";
+import ProductDetail from "./components/Product/ProductDetail";
 import WidianFooter from "./components/home/footer/Footer";
 import ScrollToTop from "./hooks/ScrollToTop";
 import ContactUs from "./components/contact/ContactUs";
+import Collection from "./components/collections/Collection";
+import HouseOfWidian from "./components/houseOfWidian/HouseOfWidian";
 
 // import { Route } from "react-router-dom";
 function App() {
@@ -21,8 +23,10 @@ function App() {
         <Suspense fallback="loading..">
           <Routes>
             <Route path="/" element={<HomeComponents />} />
-            <Route path="/products/:title" element={<ProductDetailPage />} />
+            <Route path="/products/:title" element={<ProductDetail />} />
             <Route path="/contact-us" element={<ContactUs />} />
+            <Route path="/collections/block" element={<Collection />} />
+            <Route path="/stores" element={<HouseOfWidian />} />
           </Routes>
         </Suspense>
         <WidianFooter />

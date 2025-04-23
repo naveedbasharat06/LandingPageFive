@@ -59,12 +59,11 @@ export const PerfumeProductData: PerfumeProductsType[] = [
   },
 ];
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
-};
-
 function ProductList() {
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
   //   const navigate = useNavigate();
   // navigate to product detail page
   //   const handleProductClick = (product: PerfumeProductsType) => {
@@ -80,7 +79,7 @@ function ProductList() {
           transition={{ delay: 0.2, duration: 0.5 }}
           className="font-playfair-custom text-4xl md:text-[42px] font-medium leading-[50px] tracking-normal uppercase text-[#757C5B]"
         >
-          You May Also Like.
+          You May Also Like
         </motion.h1>
       </div>
 

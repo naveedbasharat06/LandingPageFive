@@ -1,0 +1,8 @@
+.houseOfWidian_heroSection {
+  background-image: url("../../images/widianheroBg.png");
+  width: 100%;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 680px;
+}
