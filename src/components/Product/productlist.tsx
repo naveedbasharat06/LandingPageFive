@@ -9,7 +9,7 @@ import "./ProductDetail.css";
 import { Tooltip } from "antd";
 // import { useNavigate } from "react-router-dom";
 import { FormatPrice } from "../../utils/formatePrice";
-interface PerfumeProductsType {
+interface ProductsListType {
   id: number;
   productImg: string;
   productName: string;
@@ -19,7 +19,7 @@ interface PerfumeProductsType {
   description?: string;
   isNew?: boolean;
 }
-const PerfumeProductData: PerfumeProductsType[] = [
+const ProductListData: ProductsListType[] = [
   {
     id: 1,
     productImg: product1,
@@ -95,7 +95,7 @@ function ProductList() {
 
       {/* Products Grid border-t-2*/}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  lg:gap-0 border-b-2 border-r-2 md:border-r-0">
-        {PerfumeProductData.map((product) => (
+        {ProductListData.map((product, index) => (
           <motion.div
             key={product.id}
             variants={itemVariants}
