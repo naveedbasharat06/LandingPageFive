@@ -19,7 +19,7 @@ interface PerfumeProductsType {
   description?: string;
   isNew?: boolean;
 }
-export const PerfumeProductData: PerfumeProductsType[] = [
+const PerfumeProductData: PerfumeProductsType[] = [
   {
     id: 1,
     productImg: product1,

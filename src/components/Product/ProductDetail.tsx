@@ -9,7 +9,7 @@ import { PerfumeProductData } from "../home/ourProducts/OurProducts";
 import ProductNotes from "./Notes";
 import PerfumeNotes from "./PerfumeNotes";
 import Founder from "./Founder";
-// import ProductList from "./ProductList";
+import ProductList from "./ProductList";
 
 interface ProductType {
   id: number;
@@ -313,7 +313,7 @@ const ProductDetail = () => {
         <ProductNotes />
         <PerfumeNotes />
         <Founder />
-        {/* <ProductList /> */}
+        <ProductList />
       </div>
     </div>
   );
