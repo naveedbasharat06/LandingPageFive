@@ -9,7 +9,7 @@ import { PerfumeProductData } from "../home/ourProducts/OurProducts";
 import ProductNotes from "./Notes";
 import PerfumeNotes from "./PerfumeNotes";
 import Founder from "./Founder";
-import ProductList from "./ProductList";
+// import ProductList from "./ProductList";
 
 interface ProductType {
   id: number;
@@ -133,7 +133,7 @@ const ProductDetail = () => {
         animate={{ opacity: 1 }}
         className="text-center py-20 bg-[#FDF9F2]"
       >
-        Product not found dd
+        Product not found d
       </motion.div>
     );
   }
@@ -313,7 +313,7 @@ const ProductDetail = () => {
         <ProductNotes />
         <PerfumeNotes />
         <Founder />
-        <ProductList />
+        {/* <ProductList /> */}
       </div>
     </div>
   );
