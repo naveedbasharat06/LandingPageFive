@@ -6,3 +6,44 @@
   background-size: cover;
   height: 680px;
 }
+.ourfounder_bg {
+  background-image: url("../../images/ourfounderBg.jpg");
+  width: 76%;
+  position: relative;
+  height: 924px;
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #efece240;
+}
+.ourfounder_bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(239, 236, 226, 0.9); /* ✅ converted from #efece2 */
+  z-index: 1;
+}
+.ourfounder_bg > * {
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 767px) {
+  .ourfounder_bg {
+    background-image: url("../../images/ourfounderBg.jpg");
+    width: 100%;
+    position: relative;
+    height: auto;
+  }
+  .ourfounder_bg > div {
+    padding-top: 40px; /* Reduced top padding on mobile */
+  }
+
+  .ourfounder_bg::before {
+    background-color: rgba(
+      239,
+      236,
+      226,
+      0.95
+    ); /* Slightly stronger overlay on mobile */
+  }
+}

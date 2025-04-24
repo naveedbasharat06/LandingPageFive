@@ -3,8 +3,8 @@ import React from "react";
 import grandMosque from "../../images/image 28.png";
 function GrandMosque() {
   return (
-    <div className="h-[600px] md:h-[750px] relative">
-      <div className="md:max-[70%] 2xl:max-w-[50%] px-10 2xl:px-[200px] pt-[40%] md:pt-0 md:py-[100px] lg:py-[160px] xl:py-[200px] 2xl:py-[247px] relative z-20">
+    <div className="h-[500px] lg:h-[750px] relative">
+      <div className="max-w-[90%] md:max-w-[70%] 2xl:max-w-[50%] px-10 2xl:px-[200px] pt-[40%] md:pt-[10%] md:py-[13px] lg:py-[160px] xl:py-[200px] 2xl:py-[247px] relative z-20">
         <h2 className="font-playfair-custom font-medium text-3xl lg:text-4xl 2xl:text-[50px] leading-[60px] text-[#757C5B]">
           Grand Mosque Muse
         </h2>

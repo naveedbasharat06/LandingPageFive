@@ -133,7 +133,7 @@ const ProductDetail = () => {
         animate={{ opacity: 1 }}
         className="text-center py-20 bg-[#FDF9F2]"
       >
-        Product not found d
+        Product not found
       </motion.div>
     );
   }
