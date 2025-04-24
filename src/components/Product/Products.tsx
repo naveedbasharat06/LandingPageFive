@@ -7,8 +7,8 @@ import product4 from "../../images/product4.png";
 
 import "./ProductDetail.css";
 import { Tooltip } from "antd";
-// import { useNavigate } from "react-router-dom";
 import { FormatPrice } from "../../utils/formatePrice";
+// import { useNavigate } from "react-router-dom";
 interface ProductsListType {
   id: number;
   productImg: string;
@@ -200,5 +200,4 @@ function ProductList() {
     </div>
   );
 }
-
 export default ProductList;

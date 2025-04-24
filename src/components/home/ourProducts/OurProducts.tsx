@@ -58,13 +58,13 @@ export const PerfumeProductData: PerfumeProductsType[] = [
   },
 ];
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
-};
 
 function OurProducts() {
   const navigate = useNavigate();
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
   // navigate to product detail page
   const handleProductClick = (product: PerfumeProductsType) => {
     // Convert title to URL-friendly format
