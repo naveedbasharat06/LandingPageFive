@@ -253,7 +253,11 @@ const WidianFooter = () => {
           {footerBrand_logo.map((logo, index) => (
             <li key={index}>
               <a href="./abc">
-                <img src={logo.logo} alt={logo.Brandname} />
+                <img
+                  className="hover:-translate-y-1 duration-150 delay-100"
+                  src={logo.logo}
+                  alt={logo.Brandname}
+                />
               </a>
             </li>
           ))}

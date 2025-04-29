@@ -10,11 +10,13 @@
   background-image: url("../../images/ourfounderBg.jpg");
   width: 76%;
   position: relative;
-  height: 924px;
+  /* height: 1; */
   z-index: 0;
   background-repeat: no-repeat;
-  background-size: contain;
-  background-color: #efece240;
+  background-size: cover;
+  /* background-color: #efece240; */
+  background-color: rgba(239, 236, 226, 0.25); /* fallback */
+  overflow: hidden;
 }
 .ourfounder_bg::before {
   content: "";
@@ -29,13 +31,10 @@
 }
 @media (max-width: 767px) {
   .ourfounder_bg {
-    background-image: url("../../images/ourfounderBg.jpg");
     width: 100%;
-    position: relative;
+
     height: auto;
-  }
-  .ourfounder_bg > div {
-    padding-top: 40px; /* Reduced top padding on mobile */
+    background-image: url("../../images/ourfounderBg.jpg");
   }
 
   .ourfounder_bg::before {

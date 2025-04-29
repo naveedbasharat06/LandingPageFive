@@ -25,8 +25,9 @@ const Founder = () => {
       className="relative md:flex"
     >
       <div className=" max-w-[100%] md:w-[24%] h-[150px] md:h-[924px] bg-[#757C5B]"></div>
-      <div className="ourfounder_bg">
-        <div className="relative mx-auto items-center max-w-[90%] md:max-w-[644px] grid grid-cols-1 gap-3 md:gap-6 lg:gap-8 xl:gap-12 text-center pt-[50px] md:pt-[100px] lg:pt-[170px] z-20">
+      <div className="ourfounder_bg relative w-full">
+        {/*  content */}
+        <div className="relative z-50 mx-auto items-center max-w-[90%] md:max-w-[644px] grid grid-cols-1 gap-3 md:gap-6 lg:gap-8 xl:gap-12 text-center pt-[50px] md:pt-[100px] lg:pt-[170px]">
           <h1 className="font-playfair-custom font-semibold text-[#3D3C3A] text-2xl md:[40px] lg:[50px] xl:text-[60px] 2xl:text-[72px] leading-[120%] tracking-[3%]">
             Our Founder
           </h1>
@@ -35,7 +36,7 @@ const Founder = () => {
             className="mx-auto max-w-[80px]"
             alt="cotesion mark"
           />
-          <p className="font-nornal leading-[50px] text-base md:text-lg lg:text-2xl xl:text-[30px] 2xl:text-4xl tracking-[-1.5%] text-[#3D3C3A]">
+          <p className="font-nornal leading-[24px] md:leading-[50px] text-base md:text-lg lg:text-2xl xl:text-[30px] 2xl:text-4xl tracking-[-1.5%] text-[#3D3C3A] z-30">
             “Your perfume is your unseen personality; it expresses your mood and
             reveals your secrets.”
           </p>
@@ -45,9 +46,10 @@ const Founder = () => {
           <img src={founderSignature} className="mx-auto" alt="signature" />
         </div>
       </div>
+      {/* founder image positioned behind text */}
       <img
         src={ourfounder}
-        className="absolute bottom-0 max-w-[50%] xl:max-w-[689px] left-[6%] z-10"
+        className="absolute bottom-0 max-w-[50%] 2xl:max-w-[689px] left-[6%] object-cover z-0"
         alt="founder"
       />
     </motion.section>
