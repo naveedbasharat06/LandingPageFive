@@ -1,0 +1,21 @@
+/* Add smooth transitions for the drawer */
+
+.shipping-cart-drawer .ant-drawer-content {
+  transition: transform 0.3s cubic-bezier(0.7, 0.3, 0.1, 1) !important;
+}
+
+.shipping-cart-drawer .ant-drawer-content-wrapper {
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: Add backdrop blur effect */
+.shipping-cart-drawer .ant-drawer-mask {
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(3px);
+}
+input[type="radio"] {
+  accent-color: #757c5b; /* Change this to your desired color */
+}
+.ShippingCart_main {
+  font-family: "Century Gothic";
+}
