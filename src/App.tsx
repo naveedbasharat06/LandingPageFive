@@ -11,6 +11,7 @@ import ScrollToTop from "./hooks/ScrollToTop";
 import ContactUs from "./components/contact/ContactUs";
 import Collection from "./components/collections/Collection";
 import HouseOfWidian from "./components/houseOfWidian/HouseOfWidian";
+import PageNotFound from "./hooks/PageNotFound";
 
 // import { Route } from "react-router-dom";
 function App() {
@@ -20,13 +21,20 @@ function App() {
         <ScrollToTop />
         <BackToTop />
         <Navbar />
-        <Suspense fallback="loading..">
+        <Suspense
+          fallback={
+            <div className="flex justify-center items-center min-h-screen">
+              <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
+            </div>
+          }
+        >
           <Routes>
             <Route path="/" element={<HomeComponents />} />
             <Route path="/products/:title" element={<ProductDetail />} />
             <Route path="/contact-us" element={<ContactUs />} />
             <Route path="/collections/block" element={<Collection />} />
             <Route path="/stores" element={<HouseOfWidian />} />
+            <Route path="*" element={<PageNotFound />} />
           </Routes>
         </Suspense>
         <WidianFooter />

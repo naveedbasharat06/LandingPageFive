@@ -137,7 +137,7 @@ const TeamMember: React.FC = () => {
               {hoveredMember === artist.id && (
                 <motion.div
                   variants={itemVariants}
-                  className="absolute inset-0 flex flex-col justify-end p-5"
+                  className="absolute inset-0 flex flex-col justify-end p-2 2xl:p-5"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
@@ -148,12 +148,12 @@ const TeamMember: React.FC = () => {
                     animate={{ y: 0 }}
                     exit={{ y: 20 }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
-                    className="bg-[#757C5B] p-5"
+                    className="bg-[#757C5B] p-3 2xl:p-5"
                   >
-                    <h3 className="font-playfair-custom text-lg font-normal text-[#FFFFFF] mb-[10px] leading-6">
+                    <h3 className="font-playfair-custom text-sm 2xl:text-lg font-normal text-[#FFFFFF] mb-[4px] 2xl:mb-[10px] 2xl:leading-6">
                       {artist.name}
                     </h3>
-                    <p className="font-normal text-[13px] leading-[18px] tracking-[0%] text-[#FFFFFF]">
+                    <p className="font-normal text-xs 2xl:text-[13px] 2xl:leading-[18px] tracking-[0%] text-[#FFFFFF]">
                       {artist.description}
                     </p>
                   </motion.div>

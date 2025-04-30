@@ -232,12 +232,12 @@ const WidianFooter = () => {
                   placeholder="E-mail"
                   type="email"
                   required
-                  className="rounded-xl p-2 bg-transparent text-white flex-1"
+                  className="rounded-xl p-3 bg-transparent placeholder:text-white text-black flex-1"
                 />
                 <Button
                   type="primary"
                   htmlType="submit"
-                  className="bg-[#FFFFFF] text-[#666666] p-5  text-[13px] xl:text-[16px] md:max-w-[40%] rounded-xl border border-white  hover:bg-gray-300 transition-colors duration-300"
+                  className="bg-[#FFFFFF] text-[#666666] p-6  text-[13px] xl:text-[16px] md:max-w-[40%] rounded-xl border border-white  hover:bg-gray-300 transition-colors duration-300"
                 >
                   Subscribe
                 </Button>

@@ -25,9 +25,9 @@ const Founder = () => {
       className="relative md:flex"
     >
       <div className=" max-w-[100%] md:w-[24%] h-[150px] md:h-[924px] bg-[#757C5B]"></div>
-      <div className="ourfounder_bg relative w-full">
+      <div className="ourfounder_bg relative w-full z-20">
         {/*  content */}
-        <div className="relative z-50 mx-auto items-center max-w-[90%] md:max-w-[644px] grid grid-cols-1 gap-3 md:gap-6 lg:gap-8 xl:gap-12 text-center pt-[50px] md:pt-[100px] lg:pt-[170px]">
+        <div className="relative mx-auto items-center max-w-[90%] md:max-w-[644px] grid grid-cols-1 gap-3 md:gap-6 lg:gap-8 xl:gap-12 text-center pt-[50px] md:pt-[100px] lg:pt-[170px] z-50">
           <h1 className="font-playfair-custom font-semibold text-[#3D3C3A] text-2xl md:[40px] lg:[50px] xl:text-[60px] 2xl:text-[72px] leading-[120%] tracking-[3%]">
             Our Founder
           </h1>
@@ -49,7 +49,7 @@ const Founder = () => {
       {/* founder image positioned behind text */}
       <img
         src={ourfounder}
-        className="absolute bottom-0 max-w-[50%] 2xl:max-w-[689px] left-[6%] object-cover z-0"
+        className="absolute bottom-0 max-w-[45%] 2xl:max-w-[689px] left-[4%] 2xl:left-[6%] object-cover z-10"
         alt="founder"
       />
     </motion.section>

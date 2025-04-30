@@ -8,6 +8,7 @@ import {
   UserOutlined,
   GlobalOutlined,
 } from "@ant-design/icons";
+import { Link } from "react-router-dom";
 // import { FaBeer } from "react-icons/fa";
 
 // const { Option } = Select;
@@ -61,7 +62,7 @@ function Navbar() {
           {/* left side - country select */}
           <div className="language_region_selection order-3 md:order-none">
             <span className="flex items-center gap-3 md:gap-0">
-              <GlobalOutlined className="text-xl" />
+              <GlobalOutlined className="text-xl text-[#030000]" />
               <Select
                 // placeholder="Select a country"
                 onChange={handleChange}
@@ -107,22 +108,30 @@ function Navbar() {
               variant="borderless"
               size="small"
               placeholder="Search"
-              className="text-black"
+              className="text-[#030000] placeholder:text-black"
             />
 
             {/* <i className="fa fa-shopping-bag" /> */}
-            <ShoppingOutlined className="text-xl" />
-            <UserOutlined className="text-xl" />
+            <ShoppingOutlined className="text-xl text-[#030000]" />
+            <UserOutlined className="text-xl text-[#030000]" />
             {/* <i className="fa fa-user" /> */}
           </div>
         </div>
 
         {/* bottom navigation */}
         <div className="mx-auto text-center justify-between grid grid-cols-2 max-w-[756px] md:flex gap-4 md:gap-12 pt-3 px-4  md:px-auto">
-          <span className="navbar_links">WIDIAN LUXURY</span>
-          <span className="navbar_links">WIDIAN PRESTIGE</span>
-          <span className="navbar_links">Shop by Emotion</span>
-          <span className="navbar_links">HOUSE OF WIDIAN</span>
+          <Link to={"*"} className="navbar_links">
+            WIDIAN LUXURY
+          </Link>
+          <Link to={"*"} className="navbar_links">
+            WIDIAN PRESTIGE
+          </Link>
+          <Link to={"*"} className="navbar_links">
+            Shop by Emotion
+          </Link>
+          <Link to={"/stores"} className="navbar_links">
+            HOUSE OF WIDIAN
+          </Link>
         </div>
       </div>
     </div>

@@ -49,7 +49,7 @@
   max-height: 50px;
   border-radius: 50px;
   border: 1px solid #666666;
-  padding: 9px 25px;
+  padding: 7px 25px;
   font-family: "Century Gothic", sans-serif;
   font-weight: 400;
   letter-spacing: 0%;
@@ -60,9 +60,9 @@
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 .newLaunch_discover_collection:hover {
-  color: #333;
+  color: #ffffff;
   border-color: #333;
-  background-color: rgba(100, 96, 96, 0.05);
+  background-color: #757b58;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   transform: translateY(-2px) scale(1.02);
 }

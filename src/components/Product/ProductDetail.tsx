@@ -167,7 +167,7 @@ const ProductDetail = () => {
                 variants={imageVariants}
                 className="border-b-2 max-h-[650px] bg-[#FCF9F2]"
               >
-                <div className="relative overflow-hidden rounded-lg shadow-sm">
+                <div className="relative overflow-hidden rounded-lg">
                   <motion.img
                     src={product.productImg}
                     alt={product.productName}
@@ -257,8 +257,11 @@ const ProductDetail = () => {
                     </h2>
                   </span>
                   <button
+                    disabled={isLoading}
                     // size="large"
-                    className="bg-[#030000] text-white px-5 py-3 text-base md:text-lg max-w-[90%] mt-7 md:mt-10 hover:bg-gray-800  rounded-lg font-bold transition delay-150 duration-200 ease-in-out hover:-translate-y-0 hover:scale-105"
+                    className={`bg-[#030000] text-white px-5 py-3 text-base md:text-lg max-w-[90%] mt-7 md:mt-10 hover:bg-gray-800  rounded-lg font-bold transition delay-150 duration-300 ease-in-out hover:-translate-y-1 ${
+                      isLoading ? "opacity-75" : ""
+                    }  `}
                   >
                     ADD TO CART
                   </button>
@@ -269,7 +272,7 @@ const ProductDetail = () => {
                   variants={itemVariants}
                   className="pt-6 max-w-[90%]"
                 >
-                  <div className="flex justify-between items-center">
+                  <div className="flex justify-between items-center h-8">
                     <h3 className="font-century-gothic font-bold text-[#030000] text-base md:text-lg uppercase">
                       PRODUCT DESCRIPTION
                     </h3>
