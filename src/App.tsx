@@ -12,6 +12,8 @@ import ContactUs from "./components/contact/ContactUs";
 import Collection from "./components/collections/Collection";
 import HouseOfWidian from "./components/houseOfWidian/HouseOfWidian";
 import PageNotFound from "./hooks/PageNotFound";
+import Login from "./components/auth/Login";
+import SignUp from "./components/auth/SignUp";
 
 // import { Route } from "react-router-dom";
 function App() {
@@ -34,6 +36,8 @@ function App() {
             <Route path="/contact-us" element={<ContactUs />} />
             <Route path="/collections/block" element={<Collection />} />
             <Route path="/stores" element={<HouseOfWidian />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<SignUp />} />
             <Route path="*" element={<PageNotFound />} />
           </Routes>
         </Suspense>

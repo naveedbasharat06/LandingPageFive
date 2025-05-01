@@ -228,12 +228,14 @@ const WidianFooter = () => {
             </p>
             <form className="mb-6">
               <div className="flex flex-col gap-6">
-                <Input
-                  placeholder="E-mail"
-                  type="email"
-                  required
-                  className="rounded-xl p-3 bg-transparent placeholder:text-white text-black flex-1"
-                />
+                <p className="border rounded-xl">
+                  <Input
+                    placeholder="E-mail"
+                    type="email"
+                    required
+                    className="rounded-xl p-3 focus:bg-transparent hover:bg-transparent  bg-transparent placeholder:text-white text-black flex-1 border-2"
+                  />
+                </p>
                 <Button
                   type="primary"
                   htmlType="submit"

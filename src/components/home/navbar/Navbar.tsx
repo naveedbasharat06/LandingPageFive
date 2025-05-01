@@ -5,11 +5,13 @@ import { Input, Select } from "antd";
 import {
   SearchOutlined,
   ShoppingOutlined,
-  UserOutlined,
+  // UserOutlined,
   GlobalOutlined,
 } from "@ant-design/icons";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import ShippingCart from "./ShippingCart"; // Import the new component
+import AuthDropdown from "../../auth/authDropdown";
 // import { FaBeer } from "react-icons/fa";
 
 // const { Option } = Select;
@@ -45,13 +47,28 @@ const countryOptions = countries.map((country) => ({
 
 function Navbar() {
   const [cartVisible, setCartVisible] = useState(false);
+  const [currentUser, setCurrentUser] = useState(() => {
+    try {
+      const user = localStorage.getItem("currentUser");
+      return user ? JSON.parse(user) : null;
+    } catch (error) {
+      console.error("Error parsing user data:", error);
+      return null;
+    }
+  });
+
+  const handleLogout = () => {
+    localStorage.removeItem("currentUser");
+    setCurrentUser(null);
+    window.location.reload();
+  };
   const handleChange = (value: string) => {
     console.log("Selected country code:", value);
   };
   const toggleCart = () => {
     setCartVisible(!cartVisible);
   };
-
+  const navigate = useNavigate();
   return (
     <div>
       {/* top nav text */}
@@ -95,8 +112,9 @@ function Navbar() {
           <div className="nav_widian_logo py-2 order-1 md:order-none">
             <img
               src={widian_logo}
+              onClick={() => navigate("/")}
               alt="widian logo"
-              className="max-w-[200px] md:max-w-[290px] max-h-[48px] md:max-h-[58px]"
+              className="max-w-[200px] md:max-w-[290px] max-h-[48px] md:max-h-[58px] cursor-pointer"
             />
           </div>
 
@@ -121,7 +139,13 @@ function Navbar() {
               className="text-xl text-[#030000] cursor-pointer"
               onClick={toggleCart}
             />
-            <UserOutlined className="text-xl text-[#030000] cursor-pointer" />
+            {/* <UserOutlined className="text-xl text-[#030000] cursor-pointer" /> */}
+            {/* // Replace the UserOutlined icon with: */}
+            <AuthDropdown
+              isAuthenticated={!!currentUser}
+              user={currentUser}
+              onLogout={handleLogout}
+            />
             {/* <i className="fa fa-user" /> */}
           </div>
 

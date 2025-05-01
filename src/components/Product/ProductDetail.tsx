@@ -143,7 +143,10 @@ const ProductDetail = () => {
   const originalPrice = product.originalPrice
     ? product.originalPrice * quantity
     : undefined;
-
+  //  add to cart nofification
+  const addToCard = () => {
+    alert("product added successfully");
+  };
   return (
     <div>
       <AnimatePresence mode="wait">
@@ -262,6 +265,7 @@ const ProductDetail = () => {
                     className={`bg-[#030000] text-white px-5 py-3 text-base md:text-lg max-w-[90%] mt-7 md:mt-10 hover:bg-gray-800  rounded-lg font-bold transition delay-150 duration-300 ease-in-out hover:-translate-y-1 ${
                       isLoading ? "opacity-75" : ""
                     }  `}
+                    onClick={addToCard}
                   >
                     ADD TO CART
                   </button>
