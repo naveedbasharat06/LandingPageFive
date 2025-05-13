@@ -10,11 +10,105 @@ import saphirecollectionImgleft from "../../images/saphire-collection-img2.png";
 import limitedcollectionImgleft from "../../images/limited-collection-img1.png";
 import limitedcollectionImgright from "../../images/limited-collection-img2.png";
 import saphirecollectionImgright2 from "../../images/saphire2-collection-img2.png";
-
+import blackcollectionHeroImg from "../../images/blackcollectionHeroImg.png";
+import blackcollectionImg from "../../images/blackcollectionImg.png";
 import "./Collection.css";
 import { Divider } from "antd";
+import { useNavigate } from "react-router-dom";
+interface PerfumeProductsType {
+  id: number;
+  productImg: string;
+  multyImg?: string;
+  productName: string;
+  productsPrice: number;
+  originalPrice?: number;
+  collection?: string;
+  description?: string;
+  isNew?: boolean;
+}
+export const PerfumeProductData: PerfumeProductsType[] = [
+  {
+    id: 1,
+    productImg: blackcollectionHeroImg,
+    productName: "Black Collection",
+    productsPrice: 2956.0,
+    originalPrice: 3200.0,
+    collection: "A voyage from the Orient to the Occident",
+    description:
+      "Embodied in the essence of WIDIAN, The Black Collection unveils a transformative journey from the desert to the west, a sensory odyssey that encapsulates encounters, moments, and cherished memories. With each wondrous fragrance, be enchanted by an initiation trip that surprises and delights, immersing you in an aromatic symphony like no other.",
+    multyImg: blackcollectionImg,
+  },
+  {
+    id: 2,
+    productImg: blackcollectionHeroImg,
+    productName: "GRANADA",
+    productsPrice: 2956.0,
+    originalPrice: 3100.0,
+    collection: "Gold Collection",
+    description:
+      "Embodied in the essence of WIDIAN, The Black Collection unveils a transformative journey from the desert to the west, a sensory odyssey that encapsulates encounters, moments, and cherished memories. With each wondrous fragrance, be enchanted by an initiation trip that surprises and delights, immersing you in an aromatic symphony like no other..",
+    multyImg: blackcollectionImg,
+  },
+  {
+    id: 3,
+    productImg: blackcollectionHeroImg,
+    productName: "BLACK II",
+    productsPrice: 2956.0,
+    originalPrice: 3300.0,
+    collection: "Sapphire Collection",
+    description:
+      "Embodied in the essence of WIDIAN, The Black Collection unveils a transformative journey from the desert to the west, a sensory odyssey that encapsulates encounters, moments, and cherished memories. With each wondrous fragrance, be enchanted by an initiation trip that surprises and delights, immersing you in an aromatic symphony like no other.",
+    multyImg: blackcollectionImg,
+  },
+  {
+    id: 4,
+    productImg: blackcollectionHeroImg,
+    productName: "LIWA",
+    productsPrice: 2956.0,
+    originalPrice: 3230.0,
+    collection: "Rose Arabs Collection",
+    description:
+      "Embodied in the essence of WIDIAN, The Black Collection unveils a transformative journey from the desert to the west, a sensory odyssey that encapsulates encounters, moments, and cherished memories. With each wondrous fragrance, be enchanted by an initiation trip that surprises and delights, immersing you in an aromatic symphony like no other.",
+    multyImg: blackcollectionImg,
+  },
+  {
+    id: 5,
+    productImg: blackcollectionHeroImg,
+    productName: "LIWA",
+    productsPrice: 2956.0,
+    originalPrice: 3230.0,
+    collection: "Rose Arabs Collection",
+    description:
+      "A Embodied in the essence of WIDIAN, The Black Collection unveils a transformative journey from the desert to the west, a sensory odyssey that encapsulates encounters, moments, and cherished memories. With each wondrous fragrance, be enchanted by an initiation trip that surprises and delights, immersing you in an aromatic symphony like no other.",
+    multyImg: blackcollectionImg,
+  },
+  {
+    id: 6,
+    productImg: blackcollectionHeroImg,
+    productName: "LIWA",
+    productsPrice: 2956.0,
+    originalPrice: 3230.0,
+    collection: "Rose Arabs Collection",
+    description:
+      "Embodied in the essence of WIDIAN, The Black Collection unveils a transformative journey from the desert to the west, a sensory odyssey that encapsulates encounters, moments, and cherished memories. With each wondrous fragrance, be enchanted by an initiation trip that surprises and delights, immersing you in an aromatic symphony like no other.",
+    multyImg: blackcollectionImg,
+  },
+];
 
 const BlockCollection = () => {
+  const navigate = useNavigate();
+  // navigate to product detail page
+  const navigateCollectionDetail = (product: PerfumeProductsType) => {
+    // Convert title to URL-friendly format
+    const urlFriendlyTitle = product.productName
+      .toLowerCase()
+      .replace(/[^\w\s-]/g, "") // Remove special characters except dashes
+      .replace(/\s+/g, "-") // Replace spaces with dashes
+      .replace(/-+/g, "-"); // Remove consecutive dashes
+    navigate(`/collection/${urlFriendlyTitle}`, {
+      state: { product: product },
+    });
+  };
   return (
     <div className="bg-[#FFFFFF] relative">
       {/* Black Collection */}
@@ -52,7 +146,10 @@ const BlockCollection = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <button className="collection_discover_fragrance">
+            <button
+              onClick={() => navigateCollectionDetail(PerfumeProductData[0])}
+              className="collection_discover_fragrance"
+            >
               DISCOVER FRAGRANCE
             </button>
           </div>
@@ -94,7 +191,10 @@ const BlockCollection = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <button className="collection_discover_fragrance">
+            <button
+              onClick={() => navigateCollectionDetail(PerfumeProductData[1])}
+              className="collection_discover_fragrance"
+            >
               DISCOVER FRAGRANCE
             </button>
           </div>
@@ -136,7 +236,10 @@ const BlockCollection = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <button className="collection_discover_fragrance">
+            <button
+              onClick={() => navigateCollectionDetail(PerfumeProductData[2])}
+              className="collection_discover_fragrance"
+            >
               DISCOVER FRAGRANCE
             </button>
           </div>
@@ -178,7 +281,10 @@ const BlockCollection = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <button className="collection_discover_fragrance">
+            <button
+              onClick={() => navigateCollectionDetail(PerfumeProductData[3])}
+              className="collection_discover_fragrance"
+            >
               DISCOVER FRAGRANCE
             </button>
           </div>
@@ -220,7 +326,10 @@ const BlockCollection = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <button className="collection_discover_fragrance">
+            <button
+              onClick={() => navigateCollectionDetail(PerfumeProductData[4])}
+              className="collection_discover_fragrance"
+            >
               DISCOVER FRAGRANCE
             </button>
           </div>
@@ -262,7 +371,10 @@ const BlockCollection = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <button className="collection_discover_fragrance">
+            <button
+              onClick={() => navigateCollectionDetail(PerfumeProductData[5])}
+              className="collection_discover_fragrance"
+            >
               DISCOVER FRAGRANCE
             </button>
           </div>
