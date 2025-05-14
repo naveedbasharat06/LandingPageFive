@@ -15,6 +15,7 @@ import blackcollectionImg from "../../images/blackcollectionImg.png";
 import "./Collection.css";
 import { Divider } from "antd";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 interface PerfumeProductsType {
   id: number;
   productImg: string;
@@ -30,73 +31,76 @@ export const PerfumeProductData: PerfumeProductsType[] = [
   {
     id: 1,
     productImg: blackcollectionHeroImg,
+    multyImg: blackcollectionImg,
     productName: "Black Collection",
     productsPrice: 2956.0,
     originalPrice: 3200.0,
     collection: "A voyage from the Orient to the Occident",
     description:
-      "Embodied in the essence of WIDIAN, The Black Collection unveils a transformative journey from the desert to the west, a sensory odyssey that encapsulates encounters, moments, and cherished memories. With each wondrous fragrance, be enchanted by an initiation trip that surprises and delights, immersing you in an aromatic symphony like no other.",
-    multyImg: blackcollectionImg,
+      "The Black Collection represents the essence of mystery and sophistication. Each fragrance in this collection is crafted with rare ingredients sourced from the darkest forests and most remote regions of the world, creating scents that are as deep and enigmatic as the night sky.",
   },
   {
     id: 2,
-    productImg: blackcollectionHeroImg,
-    productName: "GRANADA",
-    productsPrice: 2956.0,
-    originalPrice: 3100.0,
-    collection: "Gold Collection",
+    productImg: goldcollectionImgright,
+    multyImg: goldcollectionImgleft,
+    productName: "Gold Collection",
+    productsPrice: 3250.0,
+    originalPrice: 3500.0,
+    collection: "The Luxurious Radiance",
     description:
-      "Embodied in the essence of WIDIAN, The Black Collection unveils a transformative journey from the desert to the west, a sensory odyssey that encapsulates encounters, moments, and cherished memories. With each wondrous fragrance, be enchanted by an initiation trip that surprises and delights, immersing you in an aromatic symphony like no other..",
-    multyImg: blackcollectionImg,
+      "Our Gold Collection embodies opulence and warmth. Infused with golden amber, vanilla orchid, and precious saffron, these fragrances glow with richness and sophistication, perfect for those who appreciate the finer things in life.",
   },
   {
     id: 3,
-    productImg: blackcollectionHeroImg,
-    productName: "BLACK II",
-    productsPrice: 2956.0,
-    originalPrice: 3300.0,
-    collection: "Sapphire Collection",
+    productImg: velvetcollectionImgleft,
+    multyImg: velvetcollectionImgright,
+    productName: "Velvet Collection",
+    productsPrice: 2750.0,
+    originalPrice: 3000.0,
+    collection: "Softness Redefined",
     description:
-      "Embodied in the essence of WIDIAN, The Black Collection unveils a transformative journey from the desert to the west, a sensory odyssey that encapsulates encounters, moments, and cherished memories. With each wondrous fragrance, be enchanted by an initiation trip that surprises and delights, immersing you in an aromatic symphony like no other.",
-    multyImg: blackcollectionImg,
+      "The Velvet Collection offers fragrances as smooth and luxurious as velvet fabric. With notes of peony, cashmere musk, and white amber, these scents provide a comforting embrace that lasts throughout the day.",
   },
   {
     id: 4,
-    productImg: blackcollectionHeroImg,
-    productName: "LIWA",
-    productsPrice: 2956.0,
-    originalPrice: 3230.0,
-    collection: "Rose Arabs Collection",
+    productImg: saphirecollectionImgright,
+    multyImg: saphirecollectionImgleft,
+    productName: "Sapphire Collection",
+    productsPrice: 3100.0,
+    originalPrice: 3350.0,
+    collection: "Deep Blue Elegance",
     description:
-      "Embodied in the essence of WIDIAN, The Black Collection unveils a transformative journey from the desert to the west, a sensory odyssey that encapsulates encounters, moments, and cherished memories. With each wondrous fragrance, be enchanted by an initiation trip that surprises and delights, immersing you in an aromatic symphony like no other.",
-    multyImg: blackcollectionImg,
+      "Inspired by the depth of sapphire gems, this collection features aquatic and fresh notes combined with warm amber undertones. Perfect for those who seek a balance between freshness and depth in their fragrance.",
   },
   {
     id: 5,
-    productImg: blackcollectionHeroImg,
-    productName: "LIWA",
-    productsPrice: 2956.0,
-    originalPrice: 3230.0,
-    collection: "Rose Arabs Collection",
+    productImg: limitedcollectionImgleft,
+    multyImg: limitedcollectionImgright,
+    productName: "Limited Collection",
+    productsPrice: 3500.0,
+    originalPrice: 3800.0,
+    collection: "Exclusive Rarity",
     description:
-      "A Embodied in the essence of WIDIAN, The Black Collection unveils a transformative journey from the desert to the west, a sensory odyssey that encapsulates encounters, moments, and cherished memories. With each wondrous fragrance, be enchanted by an initiation trip that surprises and delights, immersing you in an aromatic symphony like no other.",
-    multyImg: blackcollectionImg,
+      "Our Limited Collection features rare, hard-to-find ingredients from around the world. Each bottle is individually numbered, making these fragrances truly exclusive collector's items.",
   },
   {
     id: 6,
-    productImg: blackcollectionHeroImg,
-    productName: "LIWA",
-    productsPrice: 2956.0,
-    originalPrice: 3230.0,
-    collection: "Rose Arabs Collection",
+    productImg: saphirecollectionImgright2,
+    multyImg: saphirecollectionImgright,
+    productName: "Sapphire Intense",
+    productsPrice: 3400.0,
+    originalPrice: 3650.0,
+    collection: "Deep Blue Elegance",
     description:
-      "Embodied in the essence of WIDIAN, The Black Collection unveils a transformative journey from the desert to the west, a sensory odyssey that encapsulates encounters, moments, and cherished memories. With each wondrous fragrance, be enchanted by an initiation trip that surprises and delights, immersing you in an aromatic symphony like no other.",
-    multyImg: blackcollectionImg,
+      "A more concentrated version of our Sapphire Collection, with intensified marine notes and longer-lasting sillage for those who want to make a lasting impression.",
   },
 ];
 
 const BlockCollection = () => {
   const navigate = useNavigate();
+  useEffect(() => {
+    document.title = "collections | Perfume";
+  }, []);
   // navigate to product detail page
   const navigateCollectionDetail = (product: PerfumeProductsType) => {
     // Convert title to URL-friendly format
@@ -106,7 +110,7 @@ const BlockCollection = () => {
       .replace(/\s+/g, "-") // Replace spaces with dashes
       .replace(/-+/g, "-"); // Remove consecutive dashes
     navigate(`/collection/${urlFriendlyTitle}`, {
-      state: { product: product },
+      state: { product },
     });
   };
   return (

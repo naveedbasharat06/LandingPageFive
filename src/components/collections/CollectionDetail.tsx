@@ -86,7 +86,7 @@ function CollectionDetail() {
   if (isLoading) {
     return (
       <motion.div
-        className="flex justify-center items-center h-screen bg-[#FDF9F2]"
+        className="flex justify-center items-center h-[400px] bg-[#FDF9F2]"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -110,7 +110,7 @@ function CollectionDetail() {
   if (!product) {
     return (
       <motion.div
-        className="flex justify-center items-center h-screen bg-[#FDF9F2]"
+        className="flex justify-center h-[400px] items-center  bg-[#FDF9F2]"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >
@@ -187,7 +187,7 @@ function CollectionDetail() {
           variants={staggerContainer}
           initial="hidden"
           animate="visible"
-          className="max-w-[1100px] mx-auto flex flex-col gap-5 px-4 lg:px-0 text-center"
+          className="max-w-[1100px] mx-auto flex flex-col gap-5 px-4 pb-4 lg:px-0 text-center"
         >
           <motion.h2
             variants={itemAnimation}
@@ -246,12 +246,12 @@ function CollectionDetail() {
 
               {/* Product Details */}
               <motion.div
-                className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/70 to-transparent"
-                initial={{ opacity: 0, y: 20 }}
-                whileHover={{ opacity: 1, y: 0 }}
+                className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/50 to-transparent"
+                // initial={{ opacity: 0, y: 20 }}
+                // whileHover={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="z-30 text-center transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                <div className="z-30 text-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                   <h3 className="text-white text-lg font-medium mb-1">
                     {item.productName}
                   </h3>
@@ -263,6 +263,9 @@ function CollectionDetail() {
                 <motion.button
                   whileHover={buttonHover}
                   whileTap={buttonTap}
+                  onClick={() => {
+                    alert(`Discover ${item.productName}`);
+                  }}
                   className="block w-[70%] lg:w-[50%] mx-auto mt-3 px-4 py-2 bg-[#757C5B] text-white text-sm uppercase tracking-wide rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-4 group-hover:translate-y-0"
                 >
                   Discover Now

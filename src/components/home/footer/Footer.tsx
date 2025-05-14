@@ -46,11 +46,14 @@ const WidianFooter = () => {
   const navigationLinks = {
     collections: [
       { name: "Block collection", path: "/collections/block" },
-      { name: "Gold collection", path: "/collections/gold" },
-      { name: "Velvet collection", path: "/collections/velvet" },
-      { name: "Sapphire collection", path: "/collections/sapphire" },
-      { name: "Rose Arabia collection", path: "/collections/rose-arabia" },
-      { name: "Limited collection", path: "/collections/limited" },
+      { name: "Gold collection", path: "/collection/gold-collection" },
+      { name: "Velvet collection", path: "/collection/velvet-collection" },
+      { name: "Sapphire collection", path: "/collection/sapphire-collection" },
+      {
+        name: "Rose Arabia collection",
+        path: "/collection/sapphire-collection",
+      },
+      { name: "Limited collection", path: "/collection/limited-collection" },
     ],
     customerService: [
       { name: "Payment Methods", path: "/payment-methods" },
@@ -97,7 +100,7 @@ const WidianFooter = () => {
 
   return (
     <footer className="wadian_footer_main bg-[#757B58] text-white pt-10  md:pt-20 md:pb-[50px] lg:max-h-[492px]">
-      <div className="mx-auto px-6 xl:px-8">
+      <div className="mx-auto px-4 xl:px-8">
         {/* Main Content */}
         <motion.div
           variants={containerVariants}
