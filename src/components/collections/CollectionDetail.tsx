@@ -102,7 +102,7 @@ function CollectionDetail() {
             ease: "easeInOut",
           }}
           className="w-16 h-16 border-4 border-[#757C5B] border-t-transparent rounded-full"
-        />
+        />{" "}
       </motion.div>
     );
   }

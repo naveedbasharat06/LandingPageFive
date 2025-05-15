@@ -37,7 +37,7 @@ const WidianFooter = () => {
       Brandname: "apple apy",
     },
     {
-      Id: 1,
+      Id: 5,
       logo: g_pay,
       Brandname: "g pay",
     },
@@ -45,7 +45,7 @@ const WidianFooter = () => {
 
   const navigationLinks = {
     collections: [
-      { name: "Block collection", path: "/collections/block" },
+      { name: "Black collection", path: "/collection/black-collection" },
       { name: "Gold collection", path: "/collection/gold-collection" },
       { name: "Velvet collection", path: "/collection/velvet-collection" },
       { name: "Sapphire collection", path: "/collection/sapphire-collection" },
@@ -121,7 +121,10 @@ const WidianFooter = () => {
               <img
                 src={widianLogo}
                 alt="widian logo"
-                className="xl:max-w-[250px] lg:max-w-[200px] mb-6 sm:mb-16"
+                className="2xl:max-w-[250px] lg:max-w-[200px] mb-6 sm:mb-16 cursor-pointer"
+                onClick={() => {
+                  navigate("/");
+                }}
               />
               <h3 className="text-base xl:text-lg font-bold uppercase tracking-[0%] leading-[26px] text-[#FFFFFF] ">
                 GET SOCIAL
@@ -130,7 +133,7 @@ const WidianFooter = () => {
             <ul className="space-y-3 mt-[-10px]">
               <li>
                 <a
-                  href="./#"
+                  href="/#"
                   className="flex text-[14px] xl:text-[16px] leading-[22px] font-normal tracking-[0%] items-center text-[#FFFFFF] hover:text-gray-300 transition-colors duration-300"
                 >
                   Instagram
@@ -139,7 +142,7 @@ const WidianFooter = () => {
               </li>
               <li>
                 <a
-                  href="./#"
+                  href="/#"
                   className="flex  text-[14px] xl:text-[16px] leading-[22px] font-normal tracking-[0%] items-center text-white hover:text-gray-300 transition-colors duration-300"
                 >
                   LinkedIn

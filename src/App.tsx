@@ -16,6 +16,7 @@ import Login from "./components/auth/Login";
 import SignUp from "./components/auth/SignUp";
 import CollectionDetail from "./components/collections/CollectionDetail";
 import FAQs from "./components/faqs/FAQs";
+import Main from "./components/reduxP/ReduxMain";
 
 // import { Route } from "react-router-dom";
 function App() {
@@ -48,6 +49,9 @@ function App() {
         </Suspense>
         <WidianFooter />
       </Router>
+      <div className="relative bottom-0 right-0 z-50">
+        <Main />
+      </div>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import widian_logo from "../../../images/widian_logo.png";
-import { Input, Select } from "antd";
+import { Badge, Input, Select } from "antd";
 import {
   SearchOutlined,
   ShoppingOutlined,
@@ -135,12 +135,15 @@ function Navbar() {
             />
 
             {/* <i className="fa fa-shopping-bag" /> */}
-            <ShoppingOutlined
-              className="text-xl text-[#030000] cursor-pointer"
-              onClick={toggleCart}
-            />
+            <Badge status="success" count={2}>
+              <ShoppingOutlined
+                className="text-xl text-[#030000] cursor-pointer"
+                onClick={toggleCart}
+              />
+            </Badge>
             {/* <UserOutlined className="text-xl text-[#030000] cursor-pointer" /> */}
             {/* // Replace the UserOutlined icon with: */}
+
             <AuthDropdown
               isAuthenticated={!!currentUser}
               user={currentUser}

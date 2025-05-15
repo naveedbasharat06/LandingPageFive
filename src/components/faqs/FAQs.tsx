@@ -3,6 +3,7 @@ import "./FAQs.css";
 import { FAQsItem } from "./FAQsData";
 import { AnimatePresence, motion } from "framer-motion";
 import { DownOutlined, RightOutlined } from "@ant-design/icons";
+import FaqsFooter from "./FaqsFooter";
 
 function FAQs() {
   // Track active accordion by category and id
@@ -63,7 +64,7 @@ function FAQs() {
                     : "text-[#3D3C3A]"
                 }`}
               >
-                {item.question}
+                {item.question} {item.id}
               </span>
               <motion.span
                 animate={{
@@ -144,26 +145,26 @@ function FAQs() {
   };
 
   return (
-    <div className="bg-white px-4 2xl:px-0">
+    <div className="bg-white">
       {/* FAQs top Hero Heading */}
-      <div className="h-[140px] md:h-[200px] lg:h-[228px] bg-[#EFECE2]">
+      <div className="h-[140px] md:h-[200px] lg:h-[228px] bg-[#EFECE2] px-4 2xl:px-0">
         <div className="max-w-[1440px] mx-auto h-full flex flex-col justify-center gap-4 xl:gap-7 ">
           <h1 className="font-playfair-custom font-medium text-2xl md:text-3xl lg:text-4xl text-[#757C5B]">
             Frequently Asked Questions
           </h1>
-          <span className="flex flex-row gap-2 md:gap-4 items-start ">
+          <div className="flex flex-row gap-2 md:gap-4 items-start ">
             <h3 className="text-[#757C5B] font-normal text-sm md:text-base">
               Help Center &ensp; <b className="text-[#3D3C3A]">{">"}</b>
             </h3>
             <h3 className="text-[#3D3C3A] font-normal text-sm md:text-base">
               frequently asked questions
             </h3>
-          </span>
+          </div>
         </div>
       </div>
 
       {/* FAQs Content */}
-      <div className="max-w-[1440px] mx-auto  py-8 md:py-12">
+      <div className="max-w-[1440px] mx-auto px-4 2xl:px-0  py-6 md:py-12">
         {/* General FAQs */}
         <div className="mb-12">
           <h2 className="font-playfair-custom font-medium text-[#757C5B] text-xl md:text-2xl lg:text-[28px] py-4 lg:py-[30px]">
@@ -188,6 +189,8 @@ function FAQs() {
           {renderAccordionItems("Other")}
         </div>
       </div>
+      {/* Faqs footer */}
+      <FaqsFooter />
     </div>
   );
 }
