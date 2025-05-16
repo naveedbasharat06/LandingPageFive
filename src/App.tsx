@@ -16,7 +16,7 @@ import Login from "./components/auth/Login";
 import SignUp from "./components/auth/SignUp";
 import CollectionDetail from "./components/collections/CollectionDetail";
 import FAQs from "./components/faqs/FAQs";
-import Main from "./components/reduxP/ReduxMain";
+import Main from "./components/reduxP/ReduxMain"; // will uncomment this line when you want to use redux
 
 // import { Route } from "react-router-dom";
 function App() {

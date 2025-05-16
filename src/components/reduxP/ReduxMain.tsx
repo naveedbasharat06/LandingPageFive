@@ -6,8 +6,8 @@ function Main() {
   return (
     <div>
       <Provider store={store}>
-        <ReduxApp />
-      </Provider>
+      <ReduxApp /> 
+       </Provider>
     </div>
   );
 }

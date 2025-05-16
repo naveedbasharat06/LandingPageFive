@@ -11,7 +11,7 @@ function Counter() {
     <div className="flex items-center justify-center py-6 bg-gray-100">
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
         <h1 className="text-2xl font-bold text-center mb-6 text-gray-800">
-          Redux Counter
+          React Redux |Toolkit Counter
         </h1>
 
         <div className="flex items-center justify-between mb-6">
